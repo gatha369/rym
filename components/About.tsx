@@ -2,8 +2,8 @@ export default function About() {
   return (
     <section
       id="about"
+      className="section-padding"
       style={{
-        padding: "88px 48px",
         borderTop: "0.5px solid rgba(0,0,0,0.1)",
         maxWidth: "1200px",
         margin: "0 auto",
@@ -13,14 +13,7 @@ export default function About() {
         About
       </p>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "80px",
-          alignItems: "start",
-        }}
-      >
+      <div className="about-grid">
         <div>
           <h2
             style={{

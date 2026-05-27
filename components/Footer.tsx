@@ -5,23 +5,14 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer
+      className="footer-padding"
       style={{
         borderTop: "0.5px solid rgba(0,0,0,0.1)",
-        padding: "48px 48px 32px",
         backgroundColor: "#f9f7f4",
       }}
     >
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr 1fr",
-            gap: "48px",
-            marginBottom: "48px",
-            paddingBottom: "48px",
-            borderBottom: "0.5px solid rgba(0,0,0,0.1)",
-          }}
-        >
+        <div className="footer-grid">
           {/* ロゴ */}
           <div>
             <p

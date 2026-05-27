@@ -23,8 +23,8 @@ const stats = [
 export default function Numbers() {
   return (
     <section
+      className="section-padding"
       style={{
-        padding: "88px 48px",
         borderTop: "0.5px solid rgba(0,0,0,0.1)",
         backgroundColor: "#ffffff",
       }}
@@ -34,25 +34,9 @@ export default function Numbers() {
           Numbers
         </p>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "0",
-            border: "0.5px solid rgba(0,0,0,0.1)",
-          }}
-        >
+        <div className="numbers-grid">
           {stats.map((stat, index) => (
-            <div
-              key={index}
-              style={{
-                padding: "48px 40px",
-                borderRight:
-                  index < stats.length - 1
-                    ? "0.5px solid rgba(0,0,0,0.1)"
-                    : "none",
-              }}
-            >
+            <div key={index} className="numbers-grid-item">
               <div
                 style={{
                   display: "flex",

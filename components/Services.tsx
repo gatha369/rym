@@ -36,8 +36,8 @@ export default function Services() {
   return (
     <section
       id="services"
+      className="section-padding"
       style={{
-        padding: "88px 48px",
         borderTop: "0.5px solid rgba(0,0,0,0.1)",
         backgroundColor: "#f9f7f4",
       }}
@@ -47,35 +47,9 @@ export default function Services() {
           Services
         </p>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "0",
-            border: "0.5px solid rgba(0,0,0,0.1)",
-          }}
-        >
-          {services.map((service, index) => (
-            <div
-              key={service.number}
-              style={{
-                padding: "40px 36px",
-                borderRight:
-                  index < services.length - 1
-                    ? "0.5px solid rgba(0,0,0,0.1)"
-                    : "none",
-                transition: "background 0.3s",
-                display: "flex",
-                flexDirection: "column",
-                gap: "20px",
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.background = "#ffffff";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLDivElement).style.background = "transparent";
-              }}
-            >
+        <div className="services-grid">
+          {services.map((service) => (
+            <div key={service.number} className="services-grid-item">
               <span
                 style={{
                   fontFamily: "DM Sans, sans-serif",

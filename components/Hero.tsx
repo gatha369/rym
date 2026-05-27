@@ -8,29 +8,11 @@ export default function Hero() {
   };
 
   return (
-    <section
-      style={{
-        position: "relative",
-        minHeight: "calc(100vh - 60px)",
-        display: "flex",
-        alignItems: "center",
-        padding: "88px 48px",
-        overflow: "hidden",
-      }}
-    >
+    <section className="hero-section">
       {/* 装飾SVG（念珠モチーフ） */}
       <svg
         viewBox="0 0 400 400"
-        style={{
-          position: "absolute",
-          right: "-40px",
-          top: "50%",
-          transform: "translateY(-50%)",
-          width: "520px",
-          height: "520px",
-          opacity: 0.055,
-          pointerEvents: "none",
-        }}
+        className="hero-svg"
         fill="none"
         stroke="#1a1a1a"
         strokeWidth="0.5"
@@ -136,17 +118,7 @@ export default function Hero() {
       </div>
 
       {/* 縦書き scroll */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: "40px",
-          right: "48px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "12px",
-        }}
-      >
+      <div className="hero-scroll">
         <span
           style={{
             writingMode: "vertical-rl",

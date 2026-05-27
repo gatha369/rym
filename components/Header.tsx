@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 
 const navItems = [
   { label: "RYMとは", href: "#about" },
@@ -11,9 +12,12 @@ const navItems = [
 ];
 
 export default function Header() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith("#")) {
       e.preventDefault();
+      setMobileOpen(false);
       const el = document.querySelector(href);
       if (el) el.scrollIntoView({ behavior: "smooth" });
     }
@@ -29,17 +33,7 @@ export default function Header() {
         borderBottom: "0.5px solid rgba(0,0,0,0.1)",
       }}
     >
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          padding: "0 48px",
-          height: "60px",
-          maxWidth: "1200px",
-          margin: "0 auto",
-        }}
-      >
+      <div className="header-inner">
         <Link
           href="/"
           style={{
@@ -53,7 +47,9 @@ export default function Header() {
         >
           RYM
         </Link>
-        <nav style={{ display: "flex", gap: "32px" }}>
+
+        {/* Desktop nav */}
+        <nav className="header-nav">
           {navItems.map((item) => (
             <a
               key={item.href}
@@ -75,7 +71,32 @@ export default function Header() {
             </a>
           ))}
         </nav>
+
+        {/* Hamburger button */}
+        <button
+          className="hamburger-btn"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="メニュー"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
       </div>
+
+      {/* Mobile nav */}
+      <nav className={`mobile-nav${mobileOpen ? " open" : ""}`}>
+        {navItems.map((item) => (
+          <a
+            key={item.href}
+            href={item.href}
+            className="mobile-nav-item"
+            onClick={(e) => handleScroll(e, item.href)}
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
     </header>
   );
 }

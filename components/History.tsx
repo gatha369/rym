@@ -21,36 +21,17 @@ export default function History() {
   return (
     <section
       id="history"
-      style={{
-        padding: "88px 48px",
-        borderTop: "0.5px solid rgba(0,0,0,0.1)",
-      }}
+      className="section-padding"
+      style={{ borderTop: "0.5px solid rgba(0,0,0,0.1)" }}
     >
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <p className="section-label" style={{ marginBottom: "48px" }}>
           History
         </p>
 
-        <div
-          style={{
-            borderLeft: "0.5px solid rgba(0,0,0,0.15)",
-            paddingLeft: "0",
-          }}
-        >
+        <div style={{ borderLeft: "0.5px solid rgba(0,0,0,0.15)" }}>
           {historyItems.map((item, index) => (
-            <div
-              key={index}
-              style={{
-                display: "grid",
-                gridTemplateColumns: "120px 1fr",
-                gap: "40px",
-                padding: "24px 0 24px 40px",
-                borderBottom: "0.5px solid rgba(0,0,0,0.1)",
-                alignItems: "center",
-                marginLeft: "-0.5px",
-                borderLeft: "0.5px solid rgba(0,0,0,0.15)",
-              }}
-            >
+            <div key={index} className="history-row">
               <span
                 style={{
                   fontFamily: "DM Sans, sans-serif",

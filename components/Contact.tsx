@@ -2,24 +2,15 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      style={{
-        padding: "88px 48px",
-        borderTop: "0.5px solid rgba(0,0,0,0.1)",
-      }}
+      className="section-padding"
+      style={{ borderTop: "0.5px solid rgba(0,0,0,0.1)" }}
     >
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <p className="section-label" style={{ marginBottom: "32px" }}>
           Contact
         </p>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 2fr",
-            gap: "80px",
-            alignItems: "start",
-          }}
-        >
+        <div className="contact-grid">
           {/* 左: テキスト */}
           <div>
             <h2
@@ -78,7 +69,7 @@ export default function Contact() {
               frameBorder={0}
               marginHeight={0}
               marginWidth={0}
-              style={{ maxWidth: "100%", border: "none" }}
+              style={{ width: "100%", border: "none" }}
             >
               読み込んでいます…
             </iframe>

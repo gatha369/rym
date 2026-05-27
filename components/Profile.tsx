@@ -4,24 +4,15 @@ export default function Profile() {
   return (
     <section
       id="profile"
-      style={{
-        padding: "88px 48px",
-        borderTop: "0.5px solid rgba(0,0,0,0.1)",
-      }}
+      className="section-padding"
+      style={{ borderTop: "0.5px solid rgba(0,0,0,0.1)" }}
     >
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <p className="section-label" style={{ marginBottom: "48px" }}>
           Representative
         </p>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "200px 1fr",
-            gap: "60px",
-            alignItems: "start",
-          }}
-        >
+        <div className="profile-grid">
           {/* 写真 */}
           <div>
             <Image
