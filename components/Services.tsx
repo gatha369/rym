@@ -25,7 +25,7 @@ const services = [
     number: "03",
     nameJa: "RYM systems",
     nameEn: "RYM Systems",
-    description: "企業・寺院への業務改善コンサルティング・\nシステム開発。課題解決を、共に。",
+    description: "企業・寺院への業務改善提案・\nシステム開発。課題解決を、共に。",
     linkLabel: "実績を見る →",
     href: "/works/",
     external: false,
