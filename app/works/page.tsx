@@ -78,10 +78,18 @@ const services = [
 ];
 
 const worksData = [
+    {
+    title: "企業向け　顧客管理アプリ",
+    description:
+      "Excelで管理していたデータを、長年見慣れてきた配列を活かして「壊れないしくみ」にすることができます。",
+    status: "導入済み",
+    statusClass: "text-green-700 bg-green-50 border border-green-200",
+    tags: ["GAS", "appsheet","Googleスプレッドシート"],
+  },
   {
     title: "地域団体向け　現金出納・会計システム",
     description:
-      "現金での収支管理をデジタル化。月次・年次の集計・帳票出力まで対応。複数団体に導入。",
+      "現金での収支管理をデジタル化。月次・年次の集計・帳票出力まで対応。会計担当が複数人でも同時管理が可能。スマホアプリも同期するため、外出先でも付け忘れなく現金の管理ができます。",
     status: "導入済み",
     statusClass: "text-green-700 bg-green-50 border border-green-200",
     tags: ["GAS", "Googleスプレッドシート"],
@@ -89,7 +97,7 @@ const worksData = [
   {
     title: "水道工事会社　行政書類自動作成システム",
     description:
-      "手作業で作成していた行政向け書類を自動生成。入力項目を記入するだけで提出用書類を出力。手打ち部分と併用しやすいExcel方式。",
+      "手作業で作成していた行政向け書類を自動生成。入力項目を記入するだけで提出用書類を出力。手打ち部分と併用しやすいように使いな入れたExcel方式で出力。",
     status: "開発中",
     statusClass: "text-amber-700 bg-amber-50 border border-amber-200",
     tags: ["Webアプリ", "Next.js", "データベース"],
