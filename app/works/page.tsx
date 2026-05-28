@@ -89,10 +89,10 @@ const worksData = [
   {
     title: "水道工事会社　行政書類自動作成システム",
     description:
-      "手作業で作成していた行政向け書類を自動生成。入力項目を記入するだけで提出用PDFを出力。",
+      "手作業で作成していた行政向け書類を自動生成。入力項目を記入するだけで提出用書類を出力。手打ち部分と併用しやすいExcel方式。",
     status: "開発中",
     statusClass: "text-amber-700 bg-amber-50 border border-amber-200",
-    tags: ["GAS", "PDF自動出力"],
+    tags: ["Webアプリ", "Next.js", "データベース"],
   },
   {
     title: "寺院　檀家管理システム",
