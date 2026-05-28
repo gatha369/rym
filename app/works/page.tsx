@@ -100,7 +100,7 @@ const worksData = [
       "檀家情報・法事の管理をシステム化。名簿・施主情報の検索・更新・印刷に対応。",
     status: "開発中",
     statusClass: "text-amber-700 bg-amber-50 border border-amber-200",
-    tags: ["Webアプリ", "Next.js"],
+    tags: ["Webアプリ", "Next.js", "データベース"],
   },
 ];
 
